@@ -56,6 +56,14 @@ contract TheBlockchainCoders{
         tokenHolderInfo._to = _to;
         tokenHolderInfo._from = msg.sender;
         tokenHolderInfo._tokenHolder = true;
+        tokenHolderInfo._totalToken = _value;
+        tokenHolderInfo._tokenId = _userId;
+
+        holderToken.push(_to);
+
+        emit Transfer(msg.sender, _to, _value);
+
+        return true;
     }
 
 }
