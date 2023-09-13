@@ -40,4 +40,22 @@ contract TheBlockchainCoders{
         totalSupply = _initialSupply;
     }
 
+    function inc() internal{
+        _userId++;
+    }
+
+    function transfer(address _to, uint256 _value) public returns(bool success){
+        require(balanceOf[msg.sender]>=_value);
+        inc();
+
+        balanceOf[msg.sender] -= _value;
+        balanceOf[_to] += _value;
+
+        TokenHolderInfo storage tokenHolderInfo = tokenHolderInfos[_to];
+
+        tokenHolderInfo._to = _to;
+        tokenHolderInfo._from = msg.sender;
+        tokenHolderInfo._tokenHolder = true;
+    }
+
 }
