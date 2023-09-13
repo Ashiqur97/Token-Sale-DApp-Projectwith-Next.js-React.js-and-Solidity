@@ -6,9 +6,9 @@ contract TheBlockchainCoders{
     string public name = "The Blockchain Coders";
     string public symbol = "TBC";
     string public standard = "@theblockchaincoders";
-    string public totalSupply;
-    string public ownerOfContract;
-    string public _userId;
+    uint256 public totalSupply;
+    address public ownerOfContract;
+    uint256 public _userId;
 
     address[] public holderToken;
 
@@ -32,5 +32,12 @@ contract TheBlockchainCoders{
 
     mapping(address => uint256) public balanceOf;
     mapping (address=>mapping(address => uint256)) public allowance;
+
+
+    constructor(uint256 _initialSupply){
+        ownerOfContract = msg.sender;
+        balanceOf[msg.sender] = _initialSupply;
+        totalSupply = _initialSupply;
+    }
 
 }
