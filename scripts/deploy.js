@@ -19,5 +19,13 @@ async function main() {
 
     const TokenSale = await hre.ethers.getContractFactory("TokenSale");
     const tokenSale = await TokenSale.deploy(theBlockchainCoders.address,_tokenPrice);
+
+    await tokenSale.deployed();
+    console.log(`TokenSale: ${tokenSale.address}`)
 }
+
+main().catch((error) => {
+    console.log(error);
+    process.exitCode = 1;
+});
 
