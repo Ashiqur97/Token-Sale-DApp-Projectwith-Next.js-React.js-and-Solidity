@@ -71,7 +71,7 @@ export const getBalance = async() => {
 const fetchToken_SALE_Contract = (signerOrProvider) => 
     new ethers.Contract(TOKEN_SALE_ADDRESS,TOKEN_SALE_ABI,signerOrProvider);
 
-export const connectingTOKENCONTRACT = async () => {
+export const connectingTOKEN_SALE_CONTRACT = async () => {
     try{
         const web3modal = new Web3Modal();
         const connection = await web3modal.connect();
