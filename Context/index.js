@@ -99,7 +99,25 @@ export const StateContextProvider = ({children}) => {
 
     useEffect(() => {
         fetchInitialData();
-    },[])
+    },[]);
+
+    const buyToken = async(nToken) => {
+        try {
+            const amount = ethers.utils.parseUnits(nToken.toString(),"ether");
+            const contract = await connectingTOKEN_SALE_CONTRACT();
+
+            const buying = await contract.buyToken(nToken,{
+                value:amount.toString(),
+            });
+            
+            await buying.wait();
+            console.log(buying);
+            window.location.reload();
+
+        } catch (error) {
+            console.log(error)
+        }
+    };
 
     return (
         <StateContext.Provider value={{TOKEN_ICO}}>
