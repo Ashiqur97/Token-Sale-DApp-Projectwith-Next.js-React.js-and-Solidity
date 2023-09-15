@@ -30,7 +30,7 @@ export const StateContextProvider = ({children}) => {
             setAddress(account);
            
             const TOKEN_CONTRACT = await connectingTOKENCONTRACT();
-            console.log(TOKEN_CONTRACT);
+            // console.log(TOKEN_CONTRACT);
 
             let tokenBalance;
             if(account){
@@ -92,6 +92,10 @@ export const StateContextProvider = ({children}) => {
             };
 
             setTokenSale(tokenSale);
+            console.log(tokenSale);
+            console.log(currentHolder);
+            console.log(nativeToken);
+
         } catch (error) {
             console.log(error);
         }
@@ -109,7 +113,7 @@ export const StateContextProvider = ({children}) => {
             const buying = await contract.buyToken(nToken,{
                 value:amount.toString(),
             });
-            
+
             await buying.wait();
             console.log(buying);
             window.location.reload();
@@ -119,8 +123,30 @@ export const StateContextProvider = ({children}) => {
         }
     };
 
+    const transferNativeToken = async() => {
+        try {
+            const TOKEN_SALE_ADDRESS = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+            const TOKEN_AMOUNT = 500;
+            const tokens = TOKEN_AMOUNT.toString();
+            const transferAmount = ethers.utils.parseEther(tokens);
+
+            const contract = await connectingTOKENCONTRACT();
+            const transaction = await contract.transfer(
+                TOKEN_SALE_ADDRESS,
+                transferAmount
+            );  
+
+            console.log(contract);
+            await transaction.wait();
+            window.location.reload();
+
+        } catch(error){
+            console.log(error)
+        }
+    }
+
     return (
-        <StateContext.Provider value={{TOKEN_ICO}}>
+        <StateContext.Provider value={{transferNativeToken, TOKEN_ICO}}>
             {children}
         </StateContext.Provider>
     )
