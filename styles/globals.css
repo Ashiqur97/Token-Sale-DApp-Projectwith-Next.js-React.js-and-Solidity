@@ -37,3 +37,15 @@
 .inline_style_2{
     left: 75%;
 }
+
+.new_color {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+@media only screen and (max-width:600px) {
+    .new_image_css{
+        height: auto;
+    }
+}
+
