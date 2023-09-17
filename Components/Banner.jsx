@@ -40,7 +40,7 @@ const Banner = ({transferNativeToken}) => {
                     <a 
                     href="#whitepaper" 
                     className="btn btn-default btn-radius nav-link content-popup" 
-                    id="whitepaper">
+                    >
                       Whitepaper
                       <BsArrowRight/>
                     </a>
@@ -104,9 +104,9 @@ const Banner = ({transferNativeToken}) => {
                       <span>Ripple</span>
                     </li>
                 </ul>
-                <div 
+                <div id="whitepaper"
                 className="team_pop mfp-hide"
-                id="whitepaper"
+              
                 >
                   <div className="row m-0">
                     <div className="col-md-7">
@@ -132,10 +132,31 @@ const Banner = ({transferNativeToken}) => {
                           </div>
                         </div>
                     </div>
+
+                    <div className="col-md-3">
+                      <img 
+                      src="assets/images/whitepaper.png" 
+                      alt="" 
+                      className="pt-3 pb-3"
+                      />
+
+                    </div>
                   </div>
 
                 </div>
               </div>
+            </div>
+
+            <div className="col-lg-6 col-md-12 col-sm-12 order-first">
+                <div className="banner_image_right res_md_mb_50 res_xs_mb_30 animation"
+                  data-animation="fadeInRight"
+                  data-animation-delay="1.5s"
+                >
+                  <img 
+                  src="assets/images/banner_img2.png" 
+                  alt="" 
+                  className="new_image_css"/>
+                </div>
             </div>
         </div>
       </div> 

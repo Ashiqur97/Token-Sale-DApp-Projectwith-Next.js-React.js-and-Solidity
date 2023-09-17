@@ -33,13 +33,13 @@ const Header = ({address,setAddress,connectWallet}) => {
     },
 
   ]
-  return <div className="header_wrap fixed-top">
+  return <header className="header_wrap fixed-top">
     <div className="container-fluid">
         <nav className="navbar navbar-expand-lg">
           <a 
           href="#home_section"
           data-animation="fadeInDown"
-          data-animation-delay="is"
+          data-animation-delay="1s"
           className="navbar-brand page-scroll animation">
         <img src="assets/images/logo.png" 
         alt="logo" 
@@ -114,7 +114,7 @@ const Header = ({address,setAddress,connectWallet}) => {
         </div>
         </nav>
     </div>
-  </div>;
+  </header>;
 };
 
 export default Header;
