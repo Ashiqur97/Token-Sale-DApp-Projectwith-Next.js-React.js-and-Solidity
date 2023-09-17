@@ -58,7 +58,7 @@ const Footer = () => {
               </ul>
               </div>
               <div className="col-lg-5 col-md-6 res_md_mt_30 res_sm_mt_20">
-                <div className="newsletter_from">
+                <div className="newsletter_form">
                   <h4 className="footer_title border_title animation">
                     Newsletter
                   </h4>
@@ -90,6 +90,27 @@ const Footer = () => {
               </div>
           </div>
       </div>
+    </div>
+    <div className="bottom_footer">
+        <div className="container">
+            <div className="row">
+              <div className="col-md-6">
+                <p className="copyright">
+                  Copyright &copy;2023 All Right reversed by @Ashiqur Rahman
+                </p>
+              </div>
+              <div className="col-md-6">
+                <ul className="list_none footer_menu">
+                  <li>
+                    <a href="#">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="#">Terms & Condition</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>
     </div>
   </footer>;
 };
