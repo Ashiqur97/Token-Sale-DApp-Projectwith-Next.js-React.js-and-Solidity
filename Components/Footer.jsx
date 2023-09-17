@@ -67,11 +67,24 @@ const Footer = () => {
                       Vel et nemo soluta doloribus qui amet nesciunt ut eum perspiciatis.
                   </p>
                   <form action="#" 
-                  className="subscribe_from_animation"
+                  className="subscribe_form_animation"
                   data-animation="fadeInUp"
                   data-animation-delay="0.4s"
                   >
-                    <input type="text" className="input-rounded"/>
+                    <input 
+                    type="text" 
+                    required placeholder="Enter Email Address" 
+                    className="input-rounded"
+                    />
+                      <button 
+                      type="submit" 
+                      title="Subscribe" 
+                      className="btn-info"
+                      name="submit"
+                      value="Submit"
+                      >
+                        Submit
+                      </button>
                   </form>
                 </div>
               </div>
