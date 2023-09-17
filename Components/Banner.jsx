@@ -37,7 +37,103 @@ const Banner = ({transferNativeToken}) => {
                 className="btn_group pt-2 pb-3 animation" 
                 data-animation="fadeInUp" 
                 data-animation-delay="1.4s">
-                    <a></a>
+                    <a 
+                    href="#whitepaper" 
+                    className="btn btn-default btn-radius nav-link content-popup" 
+                    id="whitepaper">
+                      Whitepaper
+                      <BsArrowRight/>
+                    </a>
+                    <a href="#token" className="btn btn-border btn-radius">
+                        Buy Token Now!<BsArrowRight/>
+                    </a>
+                    {/* <a href="#token" className="btn btn-border btn-radius">
+                        Transfer Token!<BsArrowRight/>
+                    </a> */}
+                </div>
+                <span 
+                className="text-white icon_title animation"
+                data-animation="fadeInUp"
+                data-animation-delay="1.4s"
+                >
+                  We accept:
+                </span>
+
+                <ul className="list_none currency_icon">
+                    <li 
+                    className="animation"
+                    data-animation="fadeInUp"
+                    data-animation-delay="1.4s"
+                    >
+                      <span className="new_icon_style">
+                          <BsCurrencyBitcoin className="new_font_size" />
+                      </span>
+                      <span>Bitcoin</span>
+                    </li>
+
+                    <li 
+                    className="animation"
+                    data-animation="fadeInUp"
+                    data-animation-delay="1.4s"
+                    >
+                      <span className="new_icon_style">
+                          <FaEthereum className="new_font_size" />
+                      </span>
+                      <span>Ethereum</span>
+                    </li>
+
+                    <li 
+                    className="animation"
+                    data-animation="fadeInUp"
+                    data-animation-delay="1.4s"
+                    >
+                      <span className="new_icon_style">
+                          <SiLitecoin className="new_font_size" />
+                      </span>
+                      <span>Litecoin</span>
+                    </li>
+
+                    <li 
+                    className="animation"
+                    data-animation="fadeInUp"
+                    data-animation-delay="1.5s"
+                    >
+                      <span className="new_icon_style">
+                          <SiRipple className="new_font_size" />
+                      </span>
+                      <span>Ripple</span>
+                    </li>
+                </ul>
+                <div 
+                className="team_pop mfp-hide"
+                id="whitepaper"
+                >
+                  <div className="row m-0">
+                    <div className="col-md-7">
+                        <div className="pt-3 pb-3">
+                          <div className="title_dark title_border">
+                            <h4>Download Whitepapper</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                              Similique error ab totam quas asperiores commodi quae. 
+                              Similique earum, voluptatibus quaerat repellendus consectetur explicabo at. 
+                              Illum nulla explicabo soluta fugit doloremque?</p>
+
+                              <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                Voluptatibus, totam enim assumenda quaerat dignissimos 
+                                nam odit odio possimus adipisci temporibus necessitatibus impedit quisquam. 
+                                Vero nisi aperiam dolores reiciendis vitae voluptas?
+                              </p>
+
+                              <a href="#" className="btn btn-default btn-radius">
+                                  Download Now 
+                                  <AiOutlineCloudDownload/>
+                              </a>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
