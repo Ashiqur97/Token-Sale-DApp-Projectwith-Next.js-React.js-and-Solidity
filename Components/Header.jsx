@@ -100,12 +100,12 @@ const Header = ({address,setAddress,connectWallet}) => {
                       </small>
                     </a>
                   ) : (
-                    <a onClick={() => connectWallet()} className="btn btn-default btn-radius nav_item">
-                    <small>
-                    {""}
-                    
-                    </small>
-                  </a>
+                   <a onClick={() => connectWallet()} className="btn btn-default btn-radius nav_item">
+                      <small className="new-color">
+                        {""}
+                        Connect
+                      </small>
+                   </a>
                   )
                 }
               </li>
