@@ -148,6 +148,30 @@ const TokenSale = ({buyToken,tokenSale}) => {
                         <FaEthereum />
 
                       </li>
+
+                      <li className="animation"
+                        data-animation="fadeInUp"
+                        data-animation-delay="0.5s"
+                      >
+                        <BsCurrencyBitcoin />
+
+                      </li>
+
+                      <li className="animation"
+                        data-animation="fadeInUp"
+                        data-animation-delay="0.5s"
+                      >
+                        <SiRipple />
+
+                      </li>
+
+                      <li className="animation"
+                        data-animation="fadeInUp"
+                        data-animation-delay="0.5s"
+                      >
+                        <SiLitecoin />
+
+                      </li>
                   </ul>
               </div>
           </div>
