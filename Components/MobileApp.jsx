@@ -1,5 +1,5 @@
 import React from "react";
-import {IoLogoAndroid} from "react-icons/io";
+import {IoLogoApple} from "react-icons/io";
 import {AiFillAndroid} from "react-icons/ai";
 
 const MobileApp = () => {
@@ -46,6 +46,19 @@ const MobileApp = () => {
                     <AiFillAndroid className="new_font_size" />
                     Google Store
                   </a>
+
+                  <a className="btn btn-default btn-radius">
+                    <IoLogoApple className="new_font_size" />
+                    Apple Store
+                  </a>
+                </div>
+            </div>
+            <div className="col-lg-5 col-md-12 col-sm-12">
+                <div className="res_md_mt_50 res_sm_mt_30 text-center animation"
+                  data-animation="fadeInUp"
+                  data-animation-delay="0.2s"
+                >
+                  <img src="assets/images/mobile_app3.png" alt="" />
                 </div>
             </div>
         </div>
