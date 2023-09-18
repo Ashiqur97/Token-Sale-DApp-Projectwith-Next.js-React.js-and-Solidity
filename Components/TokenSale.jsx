@@ -85,6 +85,10 @@ const TokenSale = ({buyToken,tokenSale}) => {
               >
                 <div className="field_from">
                     <div className="row">
+                      <div className="form-group col-md-12 animation"
+                        data-animation="fadeInUp"
+                        data-animation-delay="1.4s"
+                      >
                         <input 
                         type="number"
                         required 
@@ -95,9 +99,10 @@ const TokenSale = ({buyToken,tokenSale}) => {
                         onChange={() => setNToken(e.target.value)}
                         name="token"
                         />
+                        </div>
                     </div>
                 </div>
-              </div>
+             
               <div className="tk_counter_inner">
                   <div className="progress animation"
                     data-animation="fadeInUp"
@@ -174,7 +179,48 @@ const TokenSale = ({buyToken,tokenSale}) => {
                       </li>
                   </ul>
               </div>
+              </div>
           </div>
+      </div>
+      <div className="col-lg-3">
+      <div className="pr-box">
+                  <h6       className="animation"
+            data-animation="fadeInUp"
+            data-animation-delay="0.2s">
+                    Low - High 24 h:
+                  </h6>
+                  <p       className="animation"
+            data-animation="fadeInUp"
+            data-animation-delay="0.2s">
+                  $4.534343 - $2,35454
+                  </p>
+              </div>
+
+              <div className="pr-box">
+                  <h6       className="animation"
+            data-animation="fadeInUp"
+            data-animation-delay="0.2s">
+                    Total tokens sale
+                  </h6>
+                  <p       className="animation"
+            data-animation="fadeInUp"
+            data-animation-delay="0.2s">
+                  {tokenSale?.tokenSold} TBC {showPercentage.slice(0,4)}%
+                  </p>
+              </div>
+
+              <div className="pr-box">
+                  <h6       className="animation"
+            data-animation="fadeInUp"
+            data-animation-delay="0.2s">
+                    Acceptable Currency:
+                  </h6>
+                  <p       className="animation"
+            data-animation="fadeInUp"
+            data-animation-delay="0.2s">
+                  BTC, ETH, LTC,XRP
+                  </p>
+              </div>
       </div>
     </div>
   </section>
